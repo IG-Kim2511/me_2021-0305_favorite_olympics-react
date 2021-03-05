@@ -14,33 +14,54 @@ import fried_rice from '../img/fried-rice.jpg'
 const items =[
     {
         name:'burger',
-        src: {burger}
+        src: burger
     },
     {
         name:'ramen',
-        src: {ramen}
+        src: ramen
     },
     {
         name:'pasta',
-        src: {pasta}
+        src: pasta
     },
     {
         name:'fried_rice',
-        src: {fried_rice}
+        src: fried_rice
     },
 ]
 
 function Game() {
 
-    const [Foods, setFoods] = useState([])
+    {/* kim2) choose 2 of random items and show */}
+
+    const [Foods, setFoods] = useState([]);
+    const [Display, setDisplay] = useState([]);
+
     useEffect(() => {
+
+        items.sort(()=>{Math.random()});
+        setFoods(items);
+        setDisplay([items[0],items[1]]);
+        
  
     }, [])
 
     return (
         <div>
             <FlexBox>    
-                <h1 className="title">favorite olymphics</h1>        
+                <h1 className="title">favorite olymphics</h1>    
+                
+                {
+                    Display.map((a)=>{
+                        return(
+                          <div className="flex-1">
+                            <img className="food-img" src={a.src}></img>   
+                            <div className="name">{a.name}</div>     
+                          </div>
+                        )
+                    })
+                }
+            {/* 
                 <div className="flex-1">
                     <img className="food-img" src={burger}></img>   
                     <div className="name">burger</div>     
@@ -50,7 +71,7 @@ function Game() {
                     <img className="food-img" src={ramen}></img> 
                     <div className="name">ramen</div>                
                 </div>
-            
+             */}
             </FlexBox>                    
         </div>
     )
