@@ -11,7 +11,8 @@ import ramen from '../img/ramen.jpg'
 function Game() {
     return (
         <div>
-            <FlexBox>            
+            <FlexBox>    
+                <h1 className="title">favorite olymphics</h1>        
                 <div className="flex-1">
                     <img className="food-img" src={burger}></img>   
                     <div>food</div>     
