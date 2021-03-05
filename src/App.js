@@ -2,22 +2,18 @@
 
 {/* library */}
 import React from 'react'
-import Game from './components/Game'
-
-
 import { createGlobalStyle } from "styled-components";
 
+{/* components */}
+import Game from './components/Game'
 
- {/* components */}
-
- const GlobalStyle = createGlobalStyle`
-  * {
-    margin:0;
-    padding: 0;
-    box-sizing:border-box;    
-  }
+const GlobalStyle = createGlobalStyle`
+* {
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;    
+}
 `;
-
 
 function App() {
   return (
