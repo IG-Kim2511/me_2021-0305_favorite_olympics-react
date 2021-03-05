@@ -32,7 +32,7 @@ const items =[
 
 function Game() {
 
-    {/* kim2) choose 2 of random items and show */}
+    {/* 2) choose 2 of random items and show */}
 
     const [Foods, setFoods] = useState([]);
     const [Display, setDisplay] = useState([]);
