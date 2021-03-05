@@ -15,12 +15,12 @@ function Game() {
                 <h1 className="title">favorite olymphics</h1>        
                 <div className="flex-1">
                     <img className="food-img" src={burger}></img>   
-                    <div>food</div>     
+                    <div className="name">burger</div>     
                 </div>
 
                 <div className="flex-1">
                     <img className="food-img" src={ramen}></img> 
-                    <div>food</div>                
+                    <div className="name">ramen</div>                
                 </div>
             
             </FlexBox>                    
