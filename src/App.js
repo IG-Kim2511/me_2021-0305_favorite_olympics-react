@@ -18,8 +18,7 @@ const GlobalStyle = createGlobalStyle`
 function App() {
   return (
     <div className="App">
-    main page
-
+      favorite olymphics with reac,  styled-components
     <GlobalStyle></GlobalStyle>
     <Game></Game>
       
