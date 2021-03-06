@@ -48,7 +48,14 @@ function Game() {
         setDisplay([items[0],items[1]]); 
     }, [])
 
-    {/* 3) click event : */}
+
+    {/* 3) click event :
+    clikc하면, 이전승자 데이터 저장.
+    랜덤으로 2개 아이템 뽑고, next vs 넘어감
+    반복
+    승자만으로 만들어진 object만듬
+
+    */}
 
     const clickHandler =(a) =>{        {/* ? */}   {/* 결승전 */}
         if (Foods.length<2) {
