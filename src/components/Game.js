@@ -38,23 +38,25 @@ function Game() {
     const [Display, setDisplay] = useState([]);
 
     useEffect(() => {
+        /*  2번째 방법 : {}, return빼고 사용        
+        items.sort(()=>Math.random()-0.5); */
 
-        items.sort(()=>{Math.random()});
-        setFoods(items);
-        setDisplay([items[0],items[1]]);
-        
- 
+        items.sort(()=>{return Math.random()-0.5});
+        // setFoods(items);
+        setDisplay([items[0],items[1]]); 
     }, [])
 
     return (
         <div>
             <FlexBox>    
-                <h1 className="title">favorite olymphics</h1>    
-                
+                <h1 className="title">favorite olymphics</h1>
+
+                {/*  2)  */}
                 {
                     Display.map((a)=>{
                         return(
-                          <div className="flex-1">
+                          <div className="flex-1"
+                          onClick={()=>{alert('hello')}}>
                             <img className="food-img" src={a.src}></img>   
                             <div className="name">{a.name}</div>     
                           </div>
